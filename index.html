@@ -16,12 +16,11 @@
     </header>
 
     <div class="tabs">
-      <button class="tab-btn active" onclick="showTab('timetable')">1. ٹائم ٹیبل</button>
-      <button class="tab-btn" onclick="showTab('leave')">2. چھٹی لگائیں</button>
-      <button class="tab-btn" onclick="showTab('substitute')">3. متبادل رپورٹ</button>
+      <button class="tab-btn active" onclick="showTab('timetable', this)">1. ٹائم ٹیبل</button>
+      <button class="tab-btn" onclick="showTab('leave', this)">2. چھٹی لگائیں</button>
+      <button class="tab-btn" onclick="showTab('substitute', this)">3. متبادل رپورٹ</button>
     </div>
 
-    <!-- TIMETABLE TAB -->
     <div id="timetable" class="tab-content active">
       <h2>اساتذہ کا ٹائم ٹیبل</h2>
       <button onclick="loadSampleData()">Sample 9 Teachers Load کریں</button>
@@ -29,7 +28,6 @@
       <div id="timetableGrid"></div>
     </div>
 
-    <!-- LEAVE TAB -->
     <div id="leave" class="tab-content">
       <h2>چھٹی کی انٹری</h2>
       <form id="leaveForm">
@@ -50,14 +48,13 @@
         </select>
 
         <label>وجہ:</label>
-        <input type="text" id="leaveReason" placeholder="بیماری، ذاتی کام">
+        <input type="text" id="leaveReason" placeholder="بیماری، ذاتی کام" required>
 
         <button type="submit">چھٹی لگائیں اور متبادل ڈھونڈیں</button>
       </form>
       <div id="substituteResult"></div>
     </div>
 
-    <!-- REPORT TAB -->
     <div id="substitute" class="tab-content">
       <h2>متبادل کی ہسٹری</h2>
       <div id="historyList"></div>
